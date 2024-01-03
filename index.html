@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Hero Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            background-color:rgb(250, 239, 225);
+            overflow-x: hidden;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
+        }
+        .topnav {
+        background-color: rgb(250, 239, 225);
+        overflow: hidden;
+        margin-left: 8%;
+        margin-right: 8%;
+        overflow-x: hidden;
+        }
+        .logo{
+            font-weight: bolder;
+        }
+        /* Style the links inside the navigation bar */
+        .topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+        color: rgb(255, 115, 0)
+        }
+
+        /* Add an active class to highlight the current page */
+        .topnav a.active {
+        background-color: #04AA6D;
+        color: white;
+        }
+
+        /* Hide the link that should open and close the topnav on small screens */
+        .topnav .icon {
+        display: none;
+        }
+        .menu-items{
+            margin: 0 auto;
+            display: flex;
+            justify-content: flex-end;
+            gap: 3rem;
+        }
+        .sign-in-btn{
+            border: 2px solid black;
+            width: 8rem;
+            border-radius: 2rem;
+        }
+        .sign-up-btn{
+            border: 2px solid #fff;
+            width: 8rem;
+            color:#fff;
+            background-color: #f54f03;
+            border-radius: 2rem;
+        }
+        @media screen and (max-width: 912px) {
+        .topnav a:not(.logo) {display: none;}
+        .topnav a.icon {
+            float: left;
+            display: block;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .menu-items{
+            display: flex;
+            flex-direction: column;
+            gap:0.2rem;
+        }
+        .menu-items{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .topnav {
+        margin-left: 1%;
+        margin-right: 1%;
+        }
+        }
+
+        /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+        @media screen and (max-width: 912px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive a.icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+        }
+        main{
+            margin-left: 8%;
+            margin-right: 8%;
+        }
+        .main-container{
+            height: 70%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 4rem;
+        }
+        .headings-container{
+            margin: 0;
+            margin-top: -4rem;
+        }
+         .text-container{
+            display: flex;
+            flex-direction: column;
+           
+         }
+         .main-text{
+            font-size: 4rem;
+            line-height:4rem;
+         }
+         .sub-text{
+            font-size: 1.5rem;
+            margin-right: 15%;
+            font-weight: 400;
+            color: rgb(59, 56, 56);
+            margin-top: -2rem;
+         }
+        .property-image{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            object-position: center;
+             border-radius: 1rem;
+
+        }
+        .rent-container{
+            display: flex;
+            flex-direction: row;
+        }
+        .buy{
+            background-color: #f54f03;
+            padding: 25px;
+            text-align: center;
+            color: white;
+            font-size: 1rem;
+            border-top-left-radius: 20%;
+        }
+        .sell{
+            background-color:#211f1e;
+            padding: 25px;
+            text-align: center;
+            color: white;
+            font-size: 1rem;
+        }
+        .rent{
+            background-color: #211f1e;
+            padding: 25px;
+            text-align: center;
+            color: white;
+            font-size: 1rem;
+            border-top-right-radius: 20%;
+        }
+        .search-container{
+            display: flex;
+            flex-direction: row;
+            background-color: white;
+            border-bottom-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            
+            position: absolute;
+        }
+        .location{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .Property{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .Price{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+         input{
+            padding: 16px;
+            border: none;
+         }
+        .btn{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            height: 50px;
+            width: 50px;
+            border-radius: 1rem;
+            margin-top: 4%;
+            margin-left: -2%;
+            color: white;
+            justify-items: center;
+            background-color: #04AA6D;
+            justify-content: center;
+        }
+        @media (max-width:767px) {
+            main{
+                margin-left: 1%;
+                margin-right: 1%;
+            }
+            .main-container{
+                display: grid;
+                grid-template-columns: 1fr;
+                width: 98%;
+            }
+            .main-container > :first-child {
+                order: 2;
+            }
+            
+            .main-container > :last-child {
+                order: 1;
+            }
+            .headings-container{
+            margin: 0;
+            margin-top: -1rem;
+            }
+            .main-text{
+            font-size: 2.5rem;
+            line-height:4rem;
+            margin-top: 5%;
+            }
+            .sub-text{
+                font-size: 1rem;
+                margin-right: 2%;
+                font-weight: 400;
+                color: rgb(59, 56, 56);
+                margin-top: -2rem;
+            }
+            .search-container{
+                flex-direction: column;
+                width: 90vw;
+            }
+            .btn{
+                margin-left: 5%;
+            }
+            .client-logo{
+            display: none;
+        }
+           
+        }
+        @media (min-width:912px)and (max-width:1167px) {
+            .menu-items{
+                gap:0.3rem;
+            }
+        } 
+        @media (min-width:769px)and (max-width:1523px) {
+            .main-container{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(50%, 50%));
+            }
+            .client-logo{
+                display: none;
+            }
+        }
+        .client-logo{
+            height: 70px;
+            width: 70px;
+            margin-top: 1rem;
+            mix-blend-mode:hard-light;
+        }
+        .client-container{
+            display: flex;
+            flex-direction: row;
+            gap: 14rem;
+        }
+
+</style>
+<body>
+    <div class="topnav" id="myTopnav">
+                    <a href="#logo" class="logo">Real Estate</a>
+                    <div class="menu-items">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#about">Our Services</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#contact" class="sign-in-btn">Sign In</a>
+                    <a href="#contact" class="sign-up-btn" style="color: white;">Sign Up</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                    </a>
+            </div>
+      </div>
+      <main>
+            <div class="main-container">
+                <div class="headings-container">
+                    <div class="text-heading">
+                        <h1 class="main-text">
+                            Find your modern and affortable sweet home
+                        </h1>
+                        <p class="sub-text">
+                          Search confidently with your trusted source for homes for buy, sell or rent 
+                          in a reasonable price.
+                        </p>
+                    </div>
+                     <div class="input-container">
+                        <div class="rent-container">
+                            <span class="buy">Buy</span>
+                            <span class="sell">Sell</span>
+                            <span class="rent">Rent</span>
+                        </div>
+                        <div class="search-container">
+                            <div class="location">
+                                <span>Location <i class="fa-solid fa-angle-down"></i></span>
+                                <input type="text" placeholder="New York">
+                            </div>
+                            <div class="Property">
+                                <span>Property Type <i class="fa-solid fa-angle-down"></i></span>
+                                <input type="text" placeholder="Buy">
+                            </div>
+                            <div class="Price">
+                                <span>Max. Price <i class="fa-solid fa-angle-down"></i></span>
+                                <input type="text" placeholder="12000000">
+                            </div>
+                            <div class="btn">
+                                <span><i class="fa-solid fa-magnifying-glass"></i></span>  
+                            </div>
+                        </div>
+                     </div>
+                </div>
+                <div class="image-container">
+                      <img src="https://www.propertycoza.com/wp-content/uploads/2023/07/Real-Estate-Agent.png"
+                       alt="real-estate-image" class="property-image">
+                </div>
+            </div>
+            <div class="client-container">
+                <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-google-icon-logo-png-transparent-svg-vector-bie-supply-14.png" alt="" class="client-logo">
+                <img src="https://www.edigitalagency.com.au/wp-content/uploads/netflix-logo-png-large.png" alt="" class="client-logo">
+                <img src="https://www.edigitalagency.com.au/wp-content/uploads/airbnb-logo-png-transparent-background.png" alt="" class="client-logo">
+                <img src="https://logos-world.net/wp-content/uploads/2020/07/Adobe-Logo.png" alt="" class="client-logo">
+                <img src="https://cdn.freebiesupply.com/logos/large/2x/slack-logo-svg-vector.svg" alt="" class="client-logo">
+            </div>
+      </main>
+
+<script>
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script src="https://kit.fontawesome.com/9498bdc1c3.js" crossorigin="anonymous"></script>
+</body>
+</html>
