@@ -4,7 +4,7 @@
 ### Overview
 This repo contains the source code for a modern and responsive Real Estate website. The website is designed to help users easily find, buy, sell, or rent properties. It features a clean and professional design, intuitive navigation, and compatibility across various devices.
 
-### Tech-stack
+### Tech stack
 HTML
 ### Features
 1. **Responsive Design**: The website adapts to different screen sizes, ensuring a seamless experience on desktops, tablets, and mobile devices.
