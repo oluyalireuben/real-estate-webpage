@@ -25,7 +25,7 @@ HTML
     https://github.com/oluyalireuben/real-estate-webpage
     ```
 
-2. Open `index.html` in a web browser to view the website locally.
+2. Open `index.html` in a web browser to view the website locally
 
 ### Live link 
 https://real-estate-webpage.vercel.app
