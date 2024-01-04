@@ -28,6 +28,8 @@ HTML
 
 2. Open `index.html` in a web browser to view the website locally.
 
+### Live link 
+https://real-estate-webpage.vercel.app
 
 ### Contact
 For any inquiries or feedback, feel free to reach out at oluyalireuben1@gmail.com
