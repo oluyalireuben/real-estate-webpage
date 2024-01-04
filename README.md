@@ -22,7 +22,7 @@ This repo contains the source code for a modern and responsive Real Estate websi
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/oluyalireuben/real-estate-webpage
+    https://github.com/oluyalireuben/real-estate-webpage
     ```
 
 2. Open `index.html` in a web browser to view the website locally.
